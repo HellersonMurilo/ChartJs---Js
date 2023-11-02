@@ -25,10 +25,10 @@ btn.addEventListener('click', () => {
     var campo2 = document.getElementById('numberLabel2').value
     var campo3 = document.getElementById('numberLabel3').value
     nomes.push(namesLabel)
-    agua.push(campo1)
+    agua.push((campo1 * 1000) / 100)
     luz.push(campo2)
     telefone.push(campo3)
-    
+
     myDiv.destroy()
 
     graphBar(nomes, agua, luz, telefone)
@@ -46,7 +46,7 @@ function graphBar(nomes, agua, luz, telefone) {
                     label: '# agua',
                     data: agua,
                     borderWidth: 1
-                },{
+                }, {
                     label: '# luz',
                     data: luz,
                     borderWidth: 1
@@ -56,7 +56,7 @@ function graphBar(nomes, agua, luz, telefone) {
                     data: telefone,
                     borderWidth: 1
                 }
-            ]
+                ]
             },
             options: {
                 scales: {
